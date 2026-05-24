@@ -1,0 +1,9 @@
+data/processed/
+models/
+outputs/
+__pycache__/
+*.pyc
+.env
+venv/
+.DS_Store
+*.joblib
