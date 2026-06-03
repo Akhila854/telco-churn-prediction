@@ -68,6 +68,14 @@ Task 6 — Evaluation
 
 ---
 
+## 🗄️ SQL Analysis
+
+The dataset is also analysed using raw SQL via SQLite to demonstrate query skills across joins, aggregations, CTEs, window functions, and subqueries.
+
+Run the SQL analysis:
+
+---
+
 ## ⚙️ Tech Stack
 
 | Layer | Technology |
