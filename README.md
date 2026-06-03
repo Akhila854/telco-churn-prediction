@@ -70,10 +70,24 @@ Task 6 — Evaluation
 
 ## 🗄️ SQL Analysis
 
-The dataset is also analysed using raw SQL via SQLite to demonstrate query skills across joins, aggregations, CTEs, window functions, and subqueries.
+The dataset is also analysed using raw SQL via SQLite to demonstrate aggregations, CTEs, window functions, and subqueries.
 
 Run the SQL analysis:
 
+py sql_analysis.py
+
+See [SQL_ANALYSIS.md](SQL_ANALYSIS.md) for all 8 queries and findings.
+
+| Query | Concept |
+|---|---|
+| Churn rate by contract type | GROUP BY + CASE WHEN |
+| Average tenure by payment method | Aggregation |
+| Monthly charges distribution | MIN / AVG / MAX |
+| Churn rate by internet service | Filtering + aggregation |
+| Top churned customers by tenure | ORDER BY + LIMIT |
+| Churn rate by tenure bucket | CTE |
+| Charges by churn segment | Window functions |
+| High-charge churners by contract | Subquery |
 ---
 
 ## ⚙️ Tech Stack
@@ -122,7 +136,7 @@ python src/evaluate_model.py    # Task 6
 ```
 telco-churn-prediction/
 ├── main.py
-├── sql_analysis.py          ← NEW (root level, same as main.py)
+├── sql_analysis.py
 ├── src/
 │   ├── prepare_data.py
 │   ├── feature_selection.py
@@ -130,9 +144,10 @@ telco-churn-prediction/
 │   └── evaluate_model.py
 ├── data/
 │   └── telco_churn.csv
-├── SQL_ANALYSIS.md          ← NEW (root level, same as README.md)
-├── README.md                ← UPDATE (add SQL section)
+├── SQL_ANALYSIS.md
+├── README.md
 ├── requirements.txt
 └── .gitignore
+```
 └── README.md
 ```
