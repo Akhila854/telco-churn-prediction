@@ -121,16 +121,18 @@ python src/evaluate_model.py    # Task 6
 
 ```
 telco-churn-prediction/
-├── main.py                    # Full pipeline runner
+├── main.py
+├── sql_analysis.py          ← NEW (root level, same as main.py)
 ├── src/
-│   ├── prepare_data.py        # Task 1 & 2: prep + split
-│   ├── feature_selection.py   # Task 3: feature importance
-│   ├── train_model.py         # Task 4 & 5: selection + training
-│   └── evaluate_model.py      # Task 6: metrics + plots
+│   ├── prepare_data.py
+│   ├── feature_selection.py
+│   ├── train_model.py
+│   └── evaluate_model.py
 ├── data/
-│   └── telco_churn.csv        # Raw dataset (add manually)
-├── outputs/                   # Generated plots and metrics (git-ignored)
-├── models/                    # Saved model artifacts (git-ignored)
+│   └── telco_churn.csv
+├── SQL_ANALYSIS.md          ← NEW (root level, same as README.md)
+├── README.md                ← UPDATE (add SQL section)
 ├── requirements.txt
+└── .gitignore
 └── README.md
 ```
