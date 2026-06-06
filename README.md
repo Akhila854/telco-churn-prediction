@@ -58,36 +58,28 @@ Task 6 — Evaluation
 
 | Metric | Score |
 |--------|-------|
-| Accuracy | ~0.81 |
-| Precision | ~0.67 |
-| Recall | ~0.55 |
-| F1 Score | ~0.60 |
-| ROC-AUC | ~0.85 |
+| Best Model | Logistic Regression |
+| Accuracy | 0.80 |
+| Precision | 0.64 |
+| Recall | 0.55 |
+| F1 Score | 0.59 |
+| ROC-AUC | 0.84 |
 
-> Actual numbers generated at runtime — run the pipeline to see your results.
+> Best model selected via 5-fold cross-validation across 4 classifiers.
+> Logistic Regression chosen for superior F1 and lower inference complexity.
 
 ---
 
-## 🗄️ SQL Analysis
-
-The dataset is also analysed using raw SQL via SQLite to demonstrate aggregations, CTEs, window functions, and subqueries.
-
-Run the SQL analysis:
-
-py sql_analysis.py
-
-See [SQL_ANALYSIS.md](SQL_ANALYSIS.md) for all 8 queries and findings.
-
-| Query | Concept |
+| Query | Key SQL Concept |
 |---|---|
-| Churn rate by contract type | GROUP BY + CASE WHEN |
-| Average tenure by payment method | Aggregation |
-| Monthly charges distribution | MIN / AVG / MAX |
-| Churn rate by internet service | Filtering + aggregation |
-| Top churned customers by tenure | ORDER BY + LIMIT |
-| Churn rate by tenure bucket | CTE |
-| Charges by churn segment | Window functions |
-| High-charge churners by contract | Subquery |
+| Overall churn rate | COUNT, AVG aggregation |
+| Churn rate by contract type | GROUP BY, ORDER BY |
+| Churn rate by tenure bucket | CASE WHEN, GROUP BY |
+| Avg charges — churned vs retained | GROUP BY, ROUND |
+| Churn rate by internet service | GROUP BY, filtering |
+| Highest-risk segments | Multi-column GROUP BY, HAVING |
+| Churn rate by payment method | GROUP BY, ORDER BY |
+| Monthly revenue at risk | Conditional SUM, division |
 ---
 
 ## ⚙️ Tech Stack
